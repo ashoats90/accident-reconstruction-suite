@@ -81,7 +81,8 @@ def display_image(img):
     print(f"Scale: {length_per_pixel:.4f} ft/px")
     print(f"Skid distance: {px_d2:.2f} px -> {skid_length:.2f} ft")
 
-    plt.show()
+    plt.show(block=True)
+    plt.close(fig)
 
     return {
         "reference_points": (p1, p2),
